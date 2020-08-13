@@ -1,0 +1,54 @@
+<h2>{{titulo}}</h2>
+<hr>
+
+<div class="row" *ngIf="peliculas">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12 div-pic-1"
+                 [ngStyle]="{'background-image': 'url('+ (peliculas[0] | noimage) +')'}">
+                <p (click)="verInfoPeli(peliculas[0].id)" class="pic-titulo puntero">
+                    {{ peliculas[0].original_title }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 div-pic-2"
+                 [ngStyle]="{'background-image': 'url('+ (peliculas[1] | noimage) +')'}">
+                <p (click)="verInfoPeli(peliculas[1].id)" class="pic-titulo puntero">
+                    {{ peliculas[1].original_title }}
+                </p>
+            </div>
+            <div class="col-sm-6 div-pic-2"
+                 [ngStyle]="{'background-image': 'url('+ (peliculas[2] | noimage) +')'}">
+                <p (click)="verInfoPeli(peliculas[2].id)" class="pic-titulo puntero">
+                    {{ peliculas[2].original_title }}
+                </p>
+            </div>
+        </div>
+    </div> 
+
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-6 div-pic-2"
+                 [ngStyle]="{'background-image': 'url('+ (peliculas[3] | noimage) +')'}">
+                <p (click)="verInfoPeli(peliculas[3].id)" class="pic-titulo puntero">
+                    {{ peliculas[3].original_title }}
+                </p>
+            </div>
+            <div class="col-sm-6 div-pic-2"
+                 [ngStyle]="{'background-image': 'url('+ (peliculas[4] | noimage) +')'}">
+                <p (click)="verInfoPeli(peliculas[4].id)" class="pic-titulo puntero">
+                    {{ peliculas[4].original_title }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 div-pic-1"
+                 [ngStyle]="{'background-image': 'url('+ (peliculas[5] | noimage) +')'}">
+                <p (click)="verInfoPeli(peliculas[5].id)" class="pic-titulo puntero">
+                    {{ peliculas[5].original_title }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
